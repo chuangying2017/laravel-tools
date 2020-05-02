@@ -1,0 +1,30 @@
+{
+    "name": "tools/bigbox",
+    "description": "Tool box",
+    "type": "library",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "zhang wei",
+            "email": "631711487@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+      "php": "^7.2.5",
+      "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+      "psr-4": {"Tools\\": "src/"}
+    },
+  "extra": {
+    "laravel": {
+      "providers": "Tools\\ToolsServiceProvider"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+    ]
+  }
+}
