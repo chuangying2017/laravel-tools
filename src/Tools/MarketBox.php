@@ -48,4 +48,37 @@ class MarketBox
             return $carry;
         }, []);
     }
+
+    /**
+     * 简单递推算法
+     * @param int $int
+     * @param array $array
+     * @return array
+     */
+    public function hanNuoTaAlgorithm(int $int = 59, array $array = [])
+    {
+        $head = range('A','Z');
+
+        if (empty($array))
+            $array = $head;
+        $int -= 26;
+
+        foreach ($head as $k => $value)
+        {
+            for ($i=0,$forNum=$int;$forNum > 0; $forNum--,$i++)
+            {
+                if ($i >= 26)
+                {
+                    break;
+                }
+
+                $array[] = $value . $array[$i];
+            }
+
+            if ($forNum < 1) break;
+            $int = $forNum;
+        }
+
+        return $array;
+    }
 }
