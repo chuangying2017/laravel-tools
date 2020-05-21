@@ -10,6 +10,10 @@
             "email": "631711487@qq.com"
         }
     ],
+    "minimum-stability": "stable",
+    "support": {
+      "issues": "https://github.com/chuangying2017/laravel-tools.git"
+    },
     "require": {
       "php": "^7.1.*",
       "guzzlehttp/guzzle": "^6.3"
@@ -17,14 +21,14 @@
     "autoload": {
       "psr-4": {"Tools\\": "src/"}
     },
-  "extra": {
-    "laravel": {
-      "providers": "Tools\\ToolsServiceProvider"
+    "extra": {
+      "laravel": {
+        "providers": "Tools\\ToolsServiceProvider"
+      }
+    },
+    "scripts": {
+      "post-autoload-dump": [
+        "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+      ]
     }
-  },
-  "scripts": {
-    "post-autoload-dump": [
-      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
-    ]
-  }
 }
