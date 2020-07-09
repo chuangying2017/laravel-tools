@@ -8,10 +8,9 @@
 
 namespace Tools;
 
-use Illuminate\Support\ServiceProvider;
 use Tools\Tools\MarketBox;
 
-class ToolsServiceProvider extends ServiceProvider
+class ToolsServiceProvider
 {
     /**
      * Register any application services.
@@ -20,9 +19,7 @@ class ToolsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('tools.market', function(){
-            return new MarketBox();
-        });
+
     }
 
     /**
@@ -32,6 +29,6 @@ class ToolsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
     }
 }
