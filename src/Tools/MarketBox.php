@@ -51,6 +51,7 @@ class MarketBox
 
     /**
      * 简单递推算法
+     * 计算excel表格 行对应的key
      * @param int $int
      * @param array $array
      * @return array
